@@ -21,7 +21,7 @@ const SearchBox = ({
   return (
     <>
       <form className='SearchBox'>
-        <MagnifyingGlassIcon className='SearchBox--icon' />
+        <MagnifyingGlassIcon className='SearchBox--icon__magnifyingGlass' />
         <input
           className='SearchBox--input'
           autoComplete='off'

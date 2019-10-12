@@ -4,7 +4,7 @@
 body {
   margin: 0;
   font-family: $fontFamily;
-  color: $white;
+  color: $black;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -22,6 +22,13 @@ h1 {
 
 h2 {
   font-size: $subHeading;
+  font-weight: $regular;
+  color: $white;
+  line-height: $lineHeight;
+}
+
+h3 {
+  font-size: $title;
   font-weight: $regular;
   color: $white;
   line-height: $lineHeight;

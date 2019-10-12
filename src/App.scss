@@ -7,10 +7,16 @@
 }
 
 .App {
-  text-align: center;
   padding-top: $baseNumber * 10rem;
+
+  & h1 {
+    color: $white;
+    text-align: center;
+  }
 }
 
 .App--p--intro {
+  color: $white;
   font-size: $subHeading;
+  text-align: center;
 }
