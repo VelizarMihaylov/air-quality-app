@@ -1,14 +1,33 @@
 @import 'sass/variables';
+@import 'sass/mixin';
 
 .ListLocations {
   max-width: $baseNumber * 60rem;
   margin: 0 auto;
+  position: relative;
   display: flex;
-  flex-flow: row wrap;
   justify-content: space-between;
+  flex-flow: column wrap;
+
+  @include respondTo('tablet-and-up') {
+    flex-flow: row wrap;
+  }
+
   padding: $baseNumber * 1.5rem;
     > * {
     flex: 0 0 45%;
     margin: $baseNumber * 1.5rem 0 $baseNumber * 1.5rem 0;
   }
+}
+
+.ListLocations--spinner {
+  @include spinner (
+    8px solid $white,
+    8px solid #5B5CAE,
+    $baseNumber * 4rem,
+    $baseNumber * 4rem
+  );
+  position: absolute;
+  top: 50%;
+  left: 50%;
 }

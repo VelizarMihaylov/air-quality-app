@@ -1,4 +1,5 @@
 @import 'sass/variables';
+@import 'sass/mixin';
 
 .SearchBox {
   position: relative;
@@ -8,6 +9,7 @@
   border-radius: $baseNumber * 0.75rem;
   background: $white;
 }
+
 .SearchBox--input {
   position: absolute;
   top: 0;
@@ -36,5 +38,21 @@
   border: none;
   background: none;
   fill: $grey;
+  outline: none!important;
+}
+
+.SearchBox--icon__spinner {
+  @include spinner (
+    2px solid $grey,
+    2px solid $white,
+    $baseNumber * 1.5rem,
+    $baseNumber * 1.5rem
+  );
+  position: absolute;
+  top: $baseNumber * 0.5rem;
+  left: $baseNumber * 0.75rem;
+  padding: 0;
+  margin: 0;
+  background: none;
   outline: none!important;
 }

@@ -1,6 +1,12 @@
 @import 'sass/mixin';
 @import 'sass/variables';
 
+html {
+  font-size: 75%;
+  @include respondTo('tablet-and-up') {
+      font-size: 100%;
+    }
+}
 body {
   margin: 0;
   font-family: $fontFamily;

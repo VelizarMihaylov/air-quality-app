@@ -15,19 +15,19 @@ const SearchBox = ({
   data,
   dispatch
 }) => {
-  if (loading) return (<h1>Loading</h1>)
   if (error) return (<h1>Oops something went wrong!</h1>)
-  const { results: cities } = data
+  const { results: cities } = data || { results: [] }
   return (
     <>
       <form className='SearchBox'>
-        <MagnifyingGlassIcon className='SearchBox--icon__magnifyingGlass' />
+        {loading ? <div className='SearchBox--icon__spinner' /> : <MagnifyingGlassIcon className='SearchBox--icon__magnifyingGlass' />}
         <input
+          disabled={loading}
           className='SearchBox--input'
           autoComplete='off'
           list='cities'
           name='cities'
-          placeholder='Enter city name...'
+          placeholder={!loading && 'Enter city name...'}
           onSelect={handleOnSelect(cities, dispatch)}
         />
         <datalist id='cities'>

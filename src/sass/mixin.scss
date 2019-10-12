@@ -7,3 +7,33 @@ background: -webkit-linear-gradient(-45deg,  #7837af 0%,#4673ae 100%); /* Chrome
 background: linear-gradient(135deg,  #7837af 0%,#4673ae 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
 filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7837af', endColorstr='#4673ae',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
+
+@mixin spinner(
+  $border,
+  $topBorder,
+  $width,
+  $height
+  ) {
+    border: $border;
+    border-top: $topBorder;
+    border-radius: 50%;
+    width: $width;
+    height: $height;
+    animation: spin 2s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+/******* BREAKPOINTS *****/
+
+@mixin respondTo($breakpoint) {
+  @if $breakpoint == "tablet-and-up" {
+    @media (min-width: 767px) {
+      @content;
+    }
+  }
+}

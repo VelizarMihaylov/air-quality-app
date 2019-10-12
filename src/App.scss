@@ -7,7 +7,11 @@
 }
 
 .App {
-  padding-top: $baseNumber * 10rem;
+    padding: $baseNumber * 1.5rem 0 $baseNumber * 1.5rem 0;
+    
+    @include respondTo('tablet-and-up') {
+      padding-top: $baseNumber * 10rem;
+    }
 
   & h1 {
     color: $white;
@@ -19,4 +23,5 @@
   color: $white;
   font-size: $subHeading;
   text-align: center;
+  padding: $baseNumber * 1.5rem;
 }
