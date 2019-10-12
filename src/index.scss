@@ -1,0 +1,28 @@
+@import 'sass/mixin';
+@import 'sass/variables';
+
+body {
+  margin: 0;
+  font-family: $fontFamily;
+  color: $white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+p {
+  font-size: $text;
+  line-height: $lineHeight;
+}
+h1 {
+  font-size: $heading;
+  font-weight: $bold;
+  color: $white;
+  line-height: $lineHeight;
+}
+
+h2 {
+  font-size: $subHeading;
+  font-weight: $regular;
+  color: $white;
+  line-height: $lineHeight;
+}

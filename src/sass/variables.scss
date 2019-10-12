@@ -1,0 +1,26 @@
+/******* GLOBAL VARIABLES TO BE USED FOR Theming *****/
+
+/*
+* The base number is used for calculating measurements
+* It set to 1 (1rem, or 16px), which is the default size set by browsers.
+* All measurements should be driven by that number.
+* For example `font-size: $baseNumber * 1rem;` which will equal 16px.
+*/
+$baseNumber: 1;
+
+/******* COLORS *****/
+
+$white: #f3f3f3;
+$grey: #c1c1c1;
+$black: #151515;
+
+
+/******* TYPOGRAPHY *****/
+
+$fontFamily: 'Open Sans', sans-serif;
+$heading: $baseNumber * 4rem;
+$subHeading: $baseNumber * 2rem;
+$text: $baseNumber * 1rem;
+$bold: 600;
+$regular: 400;
+$lineHeight: $baseNumber * 1.5em;

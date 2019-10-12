@@ -1,0 +1,16 @@
+@import 'sass/mixin';
+@import 'sass/variables';
+
+#root {
+  min-height: 100vh;
+  @include gradient;
+}
+
+.App {
+  text-align: center;
+  padding-top: $baseNumber * 10rem;
+}
+
+.App--p--intro {
+  font-size: $subHeading;
+}

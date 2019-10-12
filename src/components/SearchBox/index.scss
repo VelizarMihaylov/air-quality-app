@@ -1,0 +1,40 @@
+@import 'sass/variables';
+
+.SearchBox {
+  position: relative;
+  margin: $baseNumber * 3rem auto;
+  width: $baseNumber * 20rem;
+  height: $baseNumber * 2.5rem;
+  border-radius: $baseNumber * 0.75rem;
+  background: $white;
+}
+.SearchBox--input {
+  position: absolute;
+  top: 0;
+  left: $baseNumber * 3rem;
+  right: 0;
+  background: none;
+  width: $baseNumber * 16.5rem;
+  height: $baseNumber * 2.5rem;
+  border: none;
+  appearance: none;
+  outline: none;
+
+  &::placeholder {
+  color: $black;
+  }
+}
+
+.SearchBox--icon {
+  position: absolute;
+  top: $baseNumber * 0.5rem;
+  left: $baseNumber * 0.75rem;
+  height: $baseNumber * 1.5rem;
+  width: $baseNumber * 1.5rem;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: none;
+  fill: $grey;
+  outline: none!important;
+}
