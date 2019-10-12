@@ -1,32 +1,32 @@
 import React from 'react'
 import 'App.scss'
-import { Provider } from 'react-redux'
-import store from 'state'
+import { connect } from 'react-redux'
 
 import SearchBox from 'components/SearchBox'
 import ListLocations from 'components/ListLocations'
 
-const App = () => {
+const App = ({
+  city
+}) => {
   return (
-    <Provider store={store}>
-      <div className='App'>
-        <div>
-          <h1>Compare Your Air</h1>
-          <p className='App--p--intro'>
-          Compare the air quality between cities in the UK.
-            <br />
-          Select cities to compare using the search tool below.
-          </p>
-          <SearchBox
-            url='https://api.openaq.org/v1/cities?country=GB'
-          />
-        </div>
-        <div>
-          <ListLocations />
-        </div>
+    <div className='App'>
+      <div>
+        <h1>Compare Your Air</h1>
+        <p className='App--p--intro'>
+        Compare the air quality between cities in the UK.
+          <br />
+        Select cities to compare using the search tool below.
+        </p>
+        <SearchBox
+          url='https://api.openaq.org/v1/cities?country=GB'
+        />
       </div>
-    </Provider>
+      <div>
+        {city && <ListLocations url={`https://api.openaq.org/v1/latest?city=${city}&country=GB`} />}
+      </div>
+    </div>
   )
 }
 
-export default App
+
+export default connect(({ city }) => ({ city }))(App)

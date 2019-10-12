@@ -20,7 +20,24 @@ const ListLocations = ({
   }, [city, data, dispatch])
   if (loading) return (<h1>Loading</h1>)
   if (error) return (<h1>Oops something went wrong!</h1>)
-  return locations.map(({ location }, i) => (<h1 key={`${location}-${i}`} onClick={() => dispatch({ type: 'REMOVE_LOCATION', payload: location })}>{location}</h1>))
+  return (
+    <div className='ListLocations'>
+      {locations.map(({
+        city,
+        location,
+        lastUpdated,
+        measurements
+      }, i) => (
+        <LocationCard
+          key={`${location}-${i}`}
+          city={city}
+          location={location}
+          lastUpdated={lastUpdated}
+          measurements={measurements}
+        />
+      ))}
+    </div>
+  )
 }
 
 export default connect(({ locations, city }) => ({ locations }))(

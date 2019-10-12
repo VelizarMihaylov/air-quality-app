@@ -3,7 +3,7 @@
 .LocationCard {
   position: relative;
   height: 100%;
-  max-width: 350px;
+  width: 100%;
   padding-bottom: $baseNumber * 1.5rem;
   background: $white;
   border-radius: $baseNumber * 0.75rem;
@@ -16,6 +16,7 @@
   width: $baseNumber * 1rem;
   height: $baseNumber * 1rem;
   fill: $black;
+  cursor: pointer;
 }
 
 .LocationCard--content {
