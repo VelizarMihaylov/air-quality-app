@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import store from 'state'
 
 import SearchBox from 'components/SearchBox'
-import LocationCard from 'components/LocationCard'
+import ListLocations from 'components/ListLocations'
 
 const App = () => {
   return (
@@ -22,7 +22,7 @@ const App = () => {
           />
         </div>
         <div>
-          <LocationCard />
+          <ListLocations />
         </div>
       </div>
     </Provider>
