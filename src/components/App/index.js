@@ -4,9 +4,13 @@ import { connect } from 'react-redux'
 
 import SearchBox from 'components/SearchBox'
 import ListLocations from 'components/ListLocations'
+import { withConfig } from 'context/config'
 
 export const App = ({
-  city
+  city,
+  config: {
+    apiEndpoint
+  }
 }) => {
   return (
     <div className='App'>
@@ -18,15 +22,15 @@ export const App = ({
         Select cities to compare using the search tool below.
         </p>
         <SearchBox
-          url='https://api.openaq.org/v1/cities?country=GB'
+          url={`${apiEndpoint}cities?country=GB`}
         />
       </div>
       <div>
-        {city && <ListLocations url={`https://api.openaq.org/v1/latest?city=${city}&country=GB`} />}
+        {city && <ListLocations url={`${apiEndpoint}latest?city=${city}&country=GB`} />}
       </div>
     </div>
   )
 }
 
 
-export default connect(({ city }) => ({ city }))(App)
+export default connect(({ city }) => ({ city }))(withConfig(App))

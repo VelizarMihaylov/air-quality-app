@@ -10,7 +10,12 @@ describe('App', () => {
   it('should render without throwing an error', () => {
     const AppRender = create(
       <Provider store={store}>
-        <App />
+        <App
+          config={{
+            apiEndpoint: 'https://reallycoolapi.com/v1'
+          }}
+          city={null}
+        />
       </Provider>
     )
     expect(AppRender).toMatchSnapshot()

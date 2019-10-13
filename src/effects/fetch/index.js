@@ -10,6 +10,7 @@ import useFetch from './useFetch'
   and not worry about handling the logic around that in your component
 
   An example use:
+
   javascript```
   // The wrapped component will automatically receive
   // loading, error and data props
