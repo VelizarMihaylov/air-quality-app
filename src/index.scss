@@ -2,10 +2,11 @@
 @import 'sass/variables';
 
 html {
-  font-size: 75%;
-  @include respondTo('tablet-and-up') {
-      font-size: 100%;
-    }
+  font-size: 100%;
+
+  @include respondTo('small-screen') {
+    font-size: 75%;
+  }
 }
 body {
   margin: 0;

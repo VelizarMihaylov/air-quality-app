@@ -1,6 +1,6 @@
 import React from 'react'
 import useFetch from './useFetch'
-
+// @TODO Add some description about this HOC
 export const withFetch = WrappedComponent => props => {
   const { url } = props
   if (!url || typeof url !== 'string') {
