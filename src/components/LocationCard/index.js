@@ -19,8 +19,9 @@ export const LocationCard = ({
     if (acc.length < 1 && measurement.lastUpdated) {
       const { lastUpdated } = measurement
       const year = lastUpdated.split('T')[0]
-      const hour = lastUpdated.split('T')[1]
-      acc = `${year} ${hour}`
+      const time = lastUpdated.split('T')[1]
+      acc = `${year.replace(/-/g, '/')} ${time}`
+      console.log('acc', acc)
     }
     return acc
   }, '')
