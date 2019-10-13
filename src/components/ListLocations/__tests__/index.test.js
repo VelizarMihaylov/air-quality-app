@@ -1,5 +1,5 @@
 import React from 'react'
-import { ListLocations } from '../index'
+import { ListLocations } from '../'
 import { create, act } from 'react-test-renderer'
 import { Provider } from 'react-redux'
 

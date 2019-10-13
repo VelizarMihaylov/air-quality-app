@@ -1,6 +1,6 @@
 import React from 'react'
 import { create } from 'react-test-renderer'
-import { withFetch } from '../index'
+import { withFetch } from '../'
 
 import useFetch from '../useFetch'
 jest.mock('../useFetch')

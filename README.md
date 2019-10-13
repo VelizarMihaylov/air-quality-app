@@ -2,6 +2,7 @@
 
 App that uses Open AQ Air Quality API to allow you to compare the quality of the air across cities in the UK.
 
+Live Demo Hosted On Netlify: [https://aircompair.netlify.com/](https://aircompair.netlify.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -30,4 +31,21 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `yarn deploy`
+
+Run the test script in CI enabled mode. If the test pass it will run the build script.
+Useful if you are using an CI tool like Jenkins, CircleCI, GitLabCI or Netlify.
+
+## File Structure
+
+## `src`
+All of the app logic is in this folder. The folder includes the fowling sub folders:
+
+### `effects`
+### `state`
+### `components`
+### `sass`
+
+
+
+

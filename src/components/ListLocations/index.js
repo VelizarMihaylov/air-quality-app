@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import withFetch from '../../effects/fetch'
+import withFetch from 'effects/fetch'
 import { connect } from 'react-redux'
 
 import LocationCard from 'components/LocationCard'

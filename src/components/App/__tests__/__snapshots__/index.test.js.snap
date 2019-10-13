@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App should render without throwing an error 1`] = `
+<div
+  className="App"
+>
+  <div>
+    <h1>
+      Compare Your Air
+    </h1>
+    <p
+      className="App--p--intro"
+    >
+      Compare the air quality between cities in the UK.
+      <br />
+      Select cities to compare using the search tool below.
+    </p>
+    <form
+      className="SearchBox"
+    >
+      <div
+        className="SearchBox--icon__spinner"
+      />
+      <input
+        autoComplete="off"
+        className="SearchBox--input"
+        disabled={true}
+        list="cities"
+        name="cities"
+        onSelect={[Function]}
+      />
+      <datalist
+        id="cities"
+      />
+    </form>
+  </div>
+  <div />
+</div>
+`;

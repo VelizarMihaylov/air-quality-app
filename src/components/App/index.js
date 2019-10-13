@@ -5,7 +5,7 @@ import { connect } from 'react-redux'
 import SearchBox from 'components/SearchBox'
 import ListLocations from 'components/ListLocations'
 
-const App = ({
+export const App = ({
   city
 }) => {
   return (
