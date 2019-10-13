@@ -5,11 +5,7 @@ import { connect } from 'react-redux'
 import MagnifyingGlassIcon from './icon/MagnifyingGlassIcon'
 import './index.scss'
 
-const handleOnSelect = (cities, dispatch) => event => (
-  cities.find(city => city.name === event.target.value) && dispatch({ type: 'ADD_CITY', payload: event.target.value })
-)
-
-const SearchBox = ({
+export const SearchBox = ({
   loading,
   error,
   data,
@@ -28,7 +24,9 @@ const SearchBox = ({
           list='cities'
           name='cities'
           placeholder={!loading && 'Enter city name...'}
-          onSelect={handleOnSelect(cities, dispatch)}
+          onSelect={event => (
+            cities.find(city => city.name === event.target.value) && dispatch({ type: 'ADD_CITY', payload: event.target.value })
+          )}
         />
         <datalist id='cities'>
           {cities.map(({ name, i }) => (<option key={`${i}-${name}`} value={name} />))}

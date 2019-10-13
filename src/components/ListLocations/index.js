@@ -6,7 +6,7 @@ import LocationCard from 'components/LocationCard'
 
 import './index.scss'
 
-const ListLocations = ({
+export const ListLocations = ({
   loading,
   error,
   data,

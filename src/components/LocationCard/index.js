@@ -7,7 +7,7 @@ import { connect } from 'react-redux'
 import CloseIcon from './icon/CloseIcon'
 import './index.scss'
 
-const LocationCard = ({
+export const LocationCard = ({
   city,
   location,
   measurements,
