@@ -2,9 +2,17 @@
 
 App that uses Open AQ Air Quality API to allow you to compare the quality of the air across cities in the UK.
 
-Live Demo Hosted On Netlify: [https://aircompair.netlify.com/](https://aircompair.netlify.com/)
+**Live Demo Hosted On Netlify:** [https://aircompair.netlify.com/](https://aircompair.netlify.com/)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Installation
+
+In the project root folder do:
+
+```bash
+yarn install
+```
 
 ## Available Scripts
 
@@ -40,39 +48,39 @@ Useful if you are using an CI tool like Jenkins, CircleCI, GitLabCI or Netlify.
 
 The top level folders in the project are as follow:
 
-* *build* - production ready build
-* *public* - those are the public assets that will be used durning the build process (HTML, favIcon etc.)
-* *src* - the main folder where all the logic reside
+* **build** - production ready build
+* **public** - those are the public assets that will be used durning the build process (HTML, favIcon etc.)
+* **src** - the main folder where all the logic reside
 
 The src folder contains the following suborders:
 
-### `effects`
+### `/effects`
 
-This folder contains our custom `Effect Hooks`. All the logic that deals with side effects in the app should be put here.
+This folder contains our custom [Effect Hooks](https://reactjs.org/docs/hooks-effect.html). All the logic that deals with side effects (async calls, dom manipulation etc.) should be put here.
 
-### `state`
+### `/state`
 
-This folder contains logic around our `redux` store. Everything around actions, reducers should be put here.
+This folder contains logic around our `redux` store. Everything to do with actions and reducers should be put here.
 
-*Note:*  The store does not support async actions (no Thunks or Sagas). Those are currently handled by the custom hooks in the `effects` folder, making it possible to keep our `redux` implementation simple.
+**!!! Note:**  The store does not support async actions (no Thunks or Sagas). Those are currently handled by the custom hooks in the `effects` folder, making it possible to keep our `redux` implementation simple.
 
-### `components`
+### `/components`
 
 A place for our awesome components
 
-### `sass`
+### `/sass`
 
 This folder contains `SASS` variables and mixin's that can be used for theming the components.
 
-### `context`
+### `/context`
 
 This where we should set our [Context Provider and Consumers](https://reactjs.org/docs/context.html). Those should be used send data trough the app. At the moment we have the `ConfigContext`, that will pass configuration trough the App. The configuration can include things like `API endpoints`, `DB ports`, global settings etc. All of those should be managed in single plase (in the `config.js` file in the `src` folder). Avoid the use of "magic" strings or numbers.
 
 ## Styling
 
-The project uses `SASS` as a styling solution. All of the base design elements like color, font family, font sizes etc. are declared as global variables so they can be easily updated. There are also couple of SASS `mixin's` that deal with setting breakpoints and setting some CSS short codes.
+The project uses `SASS` as a styling solution. All of the base design elements like color, font family, font sizes etc. are declared as global variables so they can be managed in one place and easily updated. There are also couple of SASS `mixin's` that deal with setting breakpoints and add some CSS short codes.
 
-It also implement a  version of the [BEM methodology](http://getbem.com/) for class naming, where the `Block` is replaced with `Component`, so we should end up with something like:
+The project also use an implementation of the [BEM methodology](http://getbem.com/) for class naming, where the `Block` is replaced with `Component`, so we should end up with something like:
 
 ```
 className='Component--button__success'
@@ -82,7 +90,7 @@ Each component has a corresponding `scss` file that contains all of the styles u
 
 ## Code Format
 
-The project uses [eslint]() to keep the formating consistent. It also follows the [JavaScript Standard Style](https://standardjs.com/) rules.
+The project uses [eslint](https://eslint.org/) to keep the formating consistent. It also follows the [JavaScript Standard Style](https://standardjs.com/) rules.
 
 ## Testing
 
@@ -90,7 +98,7 @@ The project uses `Jest` as a test runner. It follows the suggested folder struct
 
 ## Things to implement further
 
-Since the project was build in limited time, there are some things I would like to introduce in next iterations:
+Since the project was build in limited time, there are some things it will be nice to introduce in next iterations:
 
 ### `Integration tests`
 
@@ -98,15 +106,15 @@ There are currently unit tests testing the functionality in isolation but I woul
 
 ### `End to end tests`
 
-It would be nice to work with a QA and UX specialists to come up with some user journeys for which we can implement `E2E` tests. To achieve that I would use [Cypress.io](https://www.cypress.io/)
+It would be good to work with a QA and UX specialists and come up with some user journeys for which we can implement `E2E` tests. To achieve that I would use [Cypress.io](https://www.cypress.io/)
 
 ### Cross browser / Cross Device testing
 
-The project was briefly tested on Chrome, Safari and FireFox and at various breaking points using the built in DevTools those browsers provide. We should make more tests, ideally using actual devices, to make sure there are no inconsistencies in the user experience.
+The project was briefly tested on Chrome, Safari and FireFox and at various breaking points using the built in DevTools those browsers provide. I also tested it on my IPhone and IPad. We should do more testing, ideally using actual devices, to make sure there are no inconsistencies in the user experience.
 
 ### Building custom search box component
 
-The project uses the build in `datalist` functionality browsers provide. That's OK for MVP but it will behave differently on different browsers. To make sure we completely control the presentation and the functionality we should build a custom component that we can style and fully control. We should also 
+The project uses the build in `datalist` tag. That's OK for MVP but it will behave differently in different browsers. We need to make sure we completely control the presentation and the functionality. Styling the `datalist` so it acts the same way in every browser is quite chalenging so it will probably be better if we build a custom react component. We can probably use an npm package like [react-autocomplete](https://www.npmjs.com/package/react-autocomplete) but this hasn't been updated in two years so I will probably avoid adding it to the code base.
 
 
 

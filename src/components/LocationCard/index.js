@@ -2,6 +2,7 @@ import React from 'react'
 import dayjs from 'dayjs'
 import relativeTime from 'dayjs/plugin/relativeTime'
 import utc from 'dayjs/plugin/utc'
+import customParseFormat from 'dayjs/plugin/customParseFormat'
 import { connect } from 'react-redux'
 
 import CloseIcon from './icon/CloseIcon'
@@ -15,13 +16,13 @@ export const LocationCard = ({
 }) => {
   dayjs.extend(utc)
   dayjs.extend(relativeTime)
+  dayjs.extend(customParseFormat)
   const updatedAt = measurements.reduce((acc, measurement) => {
     if (acc.length < 1 && measurement.lastUpdated) {
       const { lastUpdated } = measurement
       const year = lastUpdated.split('T')[0]
-      const time = lastUpdated.split('T')[1]
-      acc = `${year.replace(/-/g, '/')} ${time}`
-      console.log('acc', acc)
+      const time = lastUpdated.split('T')[1].split(':')
+      acc = `${year.replace(/-/g, '/')} ${time[0]}:${time[1]}`
     }
     return acc
   }, '')
