@@ -52,7 +52,7 @@ exports[`ListLocations should render locations when not in loading or error stat
       <p
         className="LocationCard--content--updatedAt"
       >
-        Updated 50 years ago
+        Updated 5 hours ago
       </p>
       <h3>
         Manchester Piccadilly
@@ -99,7 +99,7 @@ exports[`ListLocations should render locations when not in loading or error stat
       <p
         className="LocationCard--content--updatedAt"
       >
-        Updated 50 years ago
+        Updated 5 hours ago
       </p>
       <h3>
         Manchester Sharston
@@ -146,7 +146,7 @@ exports[`ListLocations should render locations when not in loading or error stat
       <p
         className="LocationCard--content--updatedAt"
       >
-        Updated 4 hours ago
+        Updated 5 hours ago
       </p>
       <h3>
         Salford Eccles
@@ -200,7 +200,7 @@ exports[`ListLocations should render locations when not in loading or error stat
       <p
         className="LocationCard--content--updatedAt"
       >
-        Updated 50 years ago
+        Updated 5 hours ago
       </p>
       <h3>
         Manchester Piccadilly
@@ -247,7 +247,7 @@ exports[`ListLocations should render locations when not in loading or error stat
       <p
         className="LocationCard--content--updatedAt"
       >
-        Updated 50 years ago
+        Updated 5 hours ago
       </p>
       <h3>
         Manchester Sharston
@@ -294,7 +294,7 @@ exports[`ListLocations should render locations when not in loading or error stat
       <p
         className="LocationCard--content--updatedAt"
       >
-        Updated 4 hours ago
+        Updated 5 hours ago
       </p>
       <h3>
         Salford Eccles

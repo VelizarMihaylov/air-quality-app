@@ -2,7 +2,7 @@ import React from 'react'
 import { LocationCard } from '../'
 import { create } from 'react-test-renderer'
 
-describe('LocationCar', () => {
+describe('LocationCard', () => {
   const measurements = [
     {
       parameter: 'no2',

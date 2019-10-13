@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`LocationCar should render with city, location and measurement props 1`] = `
+exports[`LocationCard should render with city, location and measurement props 1`] = `
 <div
   className="LocationCard"
 >
@@ -33,7 +33,7 @@ exports[`LocationCar should render with city, location and measurement props 1`]
     <p
       className="LocationCard--content--updatedAt"
     >
-      Updated 50 years ago
+      Updated 5 hours ago
     </p>
     <h3>
       Manchester Piccadilly

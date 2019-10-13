@@ -23,7 +23,7 @@ export const SearchBox = ({
           autoComplete='off'
           list='cities'
           name='cities'
-          placeholder={!loading && 'Enter city name...'}
+          placeholder={loading ? undefined : 'Enter city name...'}
           onSelect={event => (
             cities.find(city => city.name === event.target.value) && dispatch({ type: 'ADD_CITY', payload: event.target.value })
           )}

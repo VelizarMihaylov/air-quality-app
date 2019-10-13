@@ -20,7 +20,6 @@ exports[`SearchBox should handle loading state 1`] = `
     list="cities"
     name="cities"
     onSelect={[Function]}
-    placeholder={false}
   />
   <datalist
     id="cities"
