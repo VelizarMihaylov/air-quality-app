@@ -2,7 +2,17 @@ import React from 'react'
 import { LocationCard } from '../'
 import { create } from 'react-test-renderer'
 
+import dayjs from 'dayjs'
+jest.mock('dayjs')
+
 describe('LocationCard', () => {
+  dayjs.mockImplementation(() => ({
+    extend: jest.fn(),
+    utc: () => ({
+      fromNow: () => '5 hours ago'
+    })
+  }))
+
   const measurements = [
     {
       parameter: 'no2',

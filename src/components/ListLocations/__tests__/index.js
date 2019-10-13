@@ -2,11 +2,21 @@ import React from 'react'
 import { ListLocations } from '../index'
 import { create, act } from 'react-test-renderer'
 import { Provider } from 'react-redux'
-import state from 'state'
 
+import state from 'state'
 import locations from '../__mocks__'
 
+import dayjs from 'dayjs'
+jest.mock('dayjs')
+
 describe('ListLocations', () => {
+  dayjs.mockImplementation(() => ({
+    extend: jest.fn(),
+    utc: () => ({
+      fromNow: () => '5 hours ago'
+    })
+  }))
+
   it('should handle loading state', () => {
     const ListLocationsRender = create(<ListLocations loading dispatch={jest.fn()} locations={[]} />).toJSON()
     expect(ListLocationsRender).toMatchSnapshot()
