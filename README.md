@@ -50,7 +50,7 @@ The top level folders in the project are as follow:
 
 * **build** - production ready build
 * **public** - those are the public assets that will be used durning the build process (HTML, favIcon etc.)
-* **src** - the main folder where all the logic reside
+* **src** - source code for the App
 
 The src folder contains the following suborders:
 
@@ -74,7 +74,7 @@ This folder contains `SASS` variables and mixin's that can be used for theming t
 
 ### `/context`
 
-This where we should set our [Context Provider and Consumers](https://reactjs.org/docs/context.html). Those should be used send data trough the app. At the moment we have the `ConfigContext`, that will pass configuration trough the App. The configuration can include things like `API endpoints`, `DB ports`, global settings etc. All of those should be managed in single plase (in the `config.js` file in the `src` folder). Avoid the use of "magic" strings or numbers.
+This is where we should set our [Context Provider and Consumers](https://reactjs.org/docs/context.html). Those should be used send data trough the app. At the moment we have the `ConfigContext`, that will pass configuration trough the App. The configuration can include things like `API endpoints`, `DB ports`, global settings etc. All of those should be managed in single place (in the `config.js` file in the `src` folder). Avoid the use of "magic" strings or numbers.
 
 ## Styling
 
@@ -110,7 +110,7 @@ It would be good to work with a QA and UX specialists and come up with some user
 
 ### Cross browser / Cross Device testing
 
-The project was briefly tested on Chrome, Safari and FireFox and at various breaking points using the built in DevTools those browsers provide. I also tested it on my IPhone and IPad. We should do more testing, ideally using actual devices, to make sure there are no inconsistencies in the user experience.
+The project was briefly tested on Chrome and Safari and at various breaking points using the built in DevTools those browsers provide. I also tested it on my IPhone and IPad. We should do more testing, ideally using actual devices, to make sure there are no inconsistencies in the user experience.
 
 ### Building custom search box component
 
