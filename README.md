@@ -108,11 +108,11 @@ There are currently unit tests testing the functionality in isolation but I woul
 
 It would be good to work with a QA and UX specialists and come up with some user journeys for which we can implement `E2E` tests. To achieve that I would use [Cypress.io](https://www.cypress.io/)
 
-### Cross browser / Cross Device testing
+### `Cross browser / Cross Device testing`
 
 The project was briefly tested on Chrome and Safari and at various breaking points using the built in DevTools those browsers provide. I also tested it on my IPhone and IPad. We should do more testing, ideally using actual devices, to make sure there are no inconsistencies in the user experience.
 
-### Building custom search box component
+### `Building custom search box component`
 
 The project uses the build in `datalist` tag. That's OK for MVP but it will behave differently in different browsers. We need to make sure we completely control the presentation and the functionality. Styling the `datalist` so it acts the same way in every browser is quite challenging so it will probably be better if we build a custom react component to handle that. We can probably use an npm package like [react-autocomplete](https://www.npmjs.com/package/react-autocomplete) but this hasn't been updated in two years so I will probably avoid adding it to the code base.
 
