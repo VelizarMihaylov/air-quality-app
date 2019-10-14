@@ -42,7 +42,7 @@ Your app is ready to be deployed!
 ### `yarn deploy`
 
 Run the test script in CI enabled mode. If the test pass it will run the build script.
-Useful if you are using an CI tool like Jenkins, CircleCI, GitLabCI or Netlify.
+Useful if you are using a CI tool like Jenkins, CircleCI, GitLabCI or Netlify.
 
 ## File Structure
 
@@ -52,7 +52,7 @@ The top level folders in the project are as follow:
 * **public** - those are the public assets that will be used durning the build process (HTML, favIcon etc.)
 * **src** - source code for the App
 
-The src folder contains the following suborders:
+The *src* folder contains the following suborders:
 
 ### `/effects`
 
@@ -66,7 +66,7 @@ This folder contains logic around our `redux` store. Everything to do with actio
 
 ### `/components`
 
-A place for our awesome components
+This is where our React components live
 
 ### `/sass`
 
@@ -86,7 +86,7 @@ The project also use an implementation of the [BEM methodology](http://getbem.co
 className='Component--button__success'
 ```
 
-Each component has a corresponding `scss` file that contains all of the styles used to style it.
+Each component has a corresponding `scss` file next to it's definition that contains all of the css used to style it.
 
 ## Code Format
 
@@ -114,7 +114,7 @@ The project was briefly tested on Chrome and Safari and at various breaking poin
 
 ### Building custom search box component
 
-The project uses the build in `datalist` tag. That's OK for MVP but it will behave differently in different browsers. We need to make sure we completely control the presentation and the functionality. Styling the `datalist` so it acts the same way in every browser is quite chalenging so it will probably be better if we build a custom react component. We can probably use an npm package like [react-autocomplete](https://www.npmjs.com/package/react-autocomplete) but this hasn't been updated in two years so I will probably avoid adding it to the code base.
+The project uses the build in `datalist` tag. That's OK for MVP but it will behave differently in different browsers. We need to make sure we completely control the presentation and the functionality. Styling the `datalist` so it acts the same way in every browser is quite challenging so it will probably be better if we build a custom react component to handle that. We can probably use an npm package like [react-autocomplete](https://www.npmjs.com/package/react-autocomplete) but this hasn't been updated in two years so I will probably avoid adding it to the code base.
 
 
 
