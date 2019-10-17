@@ -1,6 +1,6 @@
 import React from 'react'
 import { SearchBox } from '../index'
-import { create } from 'react-test-renderer'
+import { create, act } from 'react-test-renderer'
 
 describe('SearchBox', () => {
   const data = {
@@ -36,22 +36,47 @@ describe('SearchBox', () => {
     const SearchBoxRender = create(<SearchBox error />).toJSON()
     expect(SearchBoxRender).toMatchSnapshot()
   })
-  it('should render search box with cities passed as datalist options when loading and error are unset and data prop is set', () => {
-    const SearchBoxRender = create(<SearchBox data={data} />).toJSON()
-    expect(SearchBoxRender).toMatchSnapshot()
+  it('should list all cities options when onFocus event is triggered and data prop is set', () => {
+    const SearchBoxRender = create(
+      <SearchBox data={data} dispatch={jest.fn()} />
+    )
+
+    const input = SearchBoxRender.root.find(
+      (element) => element.type === 'input'
+    )
+
+    act(() => {
+      input.props.onFocus()
+    })
+
+    expect(
+      SearchBoxRender.root.find((element) => element.type === 'ul').children
+        .length
+    ).toBe(3)
   })
-  it('should dispatch ADD_CITY action with payload onSelect event when data prop is set ', () => {
-    const event = {
-      target: {
-        value: 'Manchester'
-      }
-    }
-    const SearchBoxRender = create(<SearchBox data={data} dispatch={jest.fn()} />)
-    const input = SearchBoxRender.root.find(element => element.type === 'input')
-    input.props.onSelect(event)
+
+  it('should dispatch ADD_CITY action when the city list is empty and onFocus action is triggered', () => {
+    const SearchBoxRender = create(
+      <SearchBox data={data} dispatch={jest.fn()} />
+    )
+
+    const input = SearchBoxRender.root.find(
+      (element) => element.type === 'input'
+    )
+
+    act(() => {
+      input.props.onFocus()
+    })
+
+    act(() => {
+      SearchBoxRender.root
+        .find((element) => element.type === 'ul')
+        .children[0].props.onMouseDown()
+    })
+
     expect(SearchBoxRender.root.props.dispatch).toHaveBeenCalledWith({
       type: 'ADD_CITY',
-      payload: 'Manchester'
+      payload: 'London'
     })
   })
 })

@@ -7,72 +7,33 @@ exports[`SearchBox should handle error state 1`] = `
 `;
 
 exports[`SearchBox should handle loading state 1`] = `
-<form
+<div
   className="SearchBox"
 >
-  <div
-    className="SearchBox--icon__spinner"
-  />
-  <input
-    autoComplete="off"
-    className="SearchBox--input"
-    disabled={true}
-    list="cities"
-    name="cities"
-    onSelect={[Function]}
-  />
-  <datalist
-    id="cities"
-  />
-</form>
-`;
-
-exports[`SearchBox should render search box with cities passed as datalist options when loading and error are unset and data prop is set 1`] = `
-<form
-  className="SearchBox"
->
-  <svg
-    className="SearchBox--icon__magnifyingGlass"
-    id="Capa_1"
+  <form
+    className="SearchBox--form"
+  >
+    <div
+      className="SearchBox--icon__spinner"
+    />
+    <input
+      autoComplete="off"
+      className="SearchBox--input"
+      disabled={true}
+      name="cities"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      value=""
+    />
+  </form>
+  <ul
+    className="SearchBox--datalist"
     style={
       Object {
-        "enableBackground": "new 0 0 30.239 30.239",
+        "display": "none",
       }
     }
-    version="1.1"
-    viewBox="0 0 30.239 30.239"
-    x="0px"
-    xlink="http://www.w3.org/1999/xlink"
-    xmlSpace="preserve"
-    xmlns="http://www.w3.org/2000/svg"
-    y="0px"
-  >
-    <g>
-      <path
-        d="M20.194,3.46c-4.613-4.613-12.121-4.613-16.734,0c-4.612,4.614-4.612,12.121,0,16.735c4.108,4.107,10.506,4.547,15.116,1.34c0.097,0.459,0.319,0.897,0.676,1.254l6.718,6.718c0.979,0.977,2.561,0.977,3.535,0c0.978-0.978,0.978-2.56,0-3.535l-6.718-6.72c-0.355-0.354-0.794-0.577-1.253-0.674C24.743,13.967,24.303,7.57,20.194,3.46zM18.073,18.074c-3.444,3.444-9.049,3.444-12.492,0c-3.442-3.444-3.442-9.048,0-12.492c3.443-3.443,9.048-3.443,12.492,0C21.517,9.026,21.517,14.63,18.073,18.074z"
-      />
-    </g>
-  </svg>
-  <input
-    autoComplete="off"
-    className="SearchBox--input"
-    list="cities"
-    name="cities"
-    onSelect={[Function]}
-    placeholder="Enter city name..."
   />
-  <datalist
-    id="cities"
-  >
-    <option
-      value="London"
-    />
-    <option
-      value="Manchester"
-    />
-    <option
-      value="Leeds"
-    />
-  </datalist>
-</form>
+</div>
 `;
