@@ -3,9 +3,18 @@
 
 .SearchBox {
   position: relative;
-  margin: $baseNumber * 3rem auto;
+  height: $baseNumber * 2.5rem;
+}
+
+
+.SearchBox--form {
+  position: absolute;
+  z-index: 999;
+  margin-left: 50%;
+  transform: translateX(-50%);
   width: $baseNumber * 20rem;
   height: $baseNumber * 2.5rem;
+  border: 2px solid $grey;
   border-radius: $baseNumber * 0.75rem;
   background: $white;
 }
@@ -24,6 +33,30 @@
 
   &::placeholder {
   color: $black;
+  }
+}
+
+.SearchBox--datalist {
+  position: absolute;
+  top: $baseNumber * 2rem;
+  width: $baseNumber * 20rem;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  max-height: $baseNumber * 10rem;
+  overflow-y: scroll;
+  list-style: none;
+  background: $white;
+  border: 2px solid $grey;
+  border-top: none;
+  border-radius: 0 0 $baseNumber * 0.75rem $baseNumber * 0.75rem;
+  z-index: 998;
+  & li {
+    padding: $baseNumber * 1.5rem 0 $baseNumber * 0.75rem 0;
+    text-align: center;
+    cursor: pointer;
+  }
+  & li:hover {
+    background: $grey;
   }
 }
 

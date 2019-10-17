@@ -7,7 +7,7 @@
 }
 
 .App {
-    padding: $baseNumber * 1.5rem 0 $baseNumber * 1.5rem 0;
+    padding: $baseNumber * 1.5rem 0 $baseNumber * 10rem 0;
     
     @include respondTo('tablet-and-up') {
       padding-top: $baseNumber * 10rem;
