@@ -15,24 +15,35 @@ exports[`App should render without throwing an error 1`] = `
       <br />
       Select cities to compare using the search tool below.
     </p>
-    <form
+    <div
       className="SearchBox"
     >
-      <div
-        className="SearchBox--icon__spinner"
+      <form
+        className="SearchBox--form"
+      >
+        <div
+          className="SearchBox--icon__spinner"
+        />
+        <input
+          autoComplete="off"
+          className="SearchBox--input"
+          disabled={true}
+          name="cities"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          value=""
+        />
+      </form>
+      <ul
+        className="SearchBox--datalist"
+        style={
+          Object {
+            "display": "none",
+          }
+        }
       />
-      <input
-        autoComplete="off"
-        className="SearchBox--input"
-        disabled={true}
-        list="cities"
-        name="cities"
-        onSelect={[Function]}
-      />
-      <datalist
-        id="cities"
-      />
-    </form>
+    </div>
   </div>
   <div />
 </div>
