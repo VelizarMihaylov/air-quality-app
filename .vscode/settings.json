@@ -1,6 +1,59 @@
 {
   "cSpell.words": [
+    "antialiased",
     "dayjs"
   ],
-  "editor.formatOnSave": true
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "prettier.eslintIntegration": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": false,
+  "stylelint.enable": true,
+  "stylelint.config": {
+    "rules": {
+      "block-no-empty": null,
+      "color-no-invalid-hex": true,
+      "comment-empty-line-before": [
+        "always",
+        {
+          "ignore": [
+            "stylelint-commands",
+            "after-comment"
+          ]
+        }
+      ],
+      "declaration-colon-space-after": "always",
+      "indentation": [
+        2,
+        {
+          "except": [
+            "value"
+          ]
+        }
+      ],
+      "max-empty-lines": 2,
+      "rule-empty-line-before": [
+        "always",
+        {
+          "except": [
+            "first-nested"
+          ],
+          "ignore": [
+            "after-comment"
+          ]
+        }
+      ],
+      "unit-whitelist": [
+        "em",
+        "rem",
+        "deg",
+        "%",
+        "s",
+      ]
+    }
+  }
 }
