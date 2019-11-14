@@ -5,6 +5,9 @@ import compose from 'lodash/fp/compose'
 
 import LocationCard from 'components/LocationCard'
 
+import { useQuery } from '@apollo/react-hooks'
+import gql from 'graphql-tag'
+
 import './index.scss'
 
 export const ListLocations = ({ loading, error, data }) => {
@@ -35,8 +38,8 @@ export const ListLocations = ({ loading, error, data }) => {
             location={location}
             lastUpdated={lastUpdated}
             measurements={measurements}
-            />
-          )}
+          />
+        )}
     </div>
   )
 }

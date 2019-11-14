@@ -9,14 +9,20 @@ import App from './components/App'
 import { ConfigProvider } from 'context/config'
 import * as serviceWorker from './serviceWorker'
 
+import { ApolloProvider } from '@apollo/react-hooks'
+import client from './graphql'
+
+
 import './index.scss'
 
 ReactDOM.render(
-  <ConfigProvider config={config}>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </ConfigProvider>,
+  <ApolloProvider client={client}>
+    <ConfigProvider config={config}>
+      <Provider store={store}>
+        <App />
+      </Provider>
+    </ConfigProvider>
+  </ApolloProvider>,
   document.getElementById('root')
 )
 

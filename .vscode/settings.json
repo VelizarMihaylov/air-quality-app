@@ -1,17 +1,29 @@
 {
-  "cSpell.words": [
-    "antialiased",
-    "dayjs"
-  ],
+  "editor.formatOnSave": true,
   "[javascript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false,
   },
   "[typescript]": {
-    "editor.formatOnSave": true
+    "editor.formatOnSave": false,
   },
-  "prettier.eslintIntegration": true,
-  "prettier.singleQuote": true,
-  "prettier.semi": false,
+  "eslint.autoFixOnSave": true,
+  "eslint.validate": [
+    "javascript",
+    {
+      "language": "typescript",
+      "autoFix": true
+    },
+    {
+      "language": "typescriptreact",
+      "autoFix": true
+    }
+  ],
+  "cSpell.words": [
+    "Interop",
+    "Openqa",
+    "graphql",
+    "mihaylv"
+  ],
   "stylelint.enable": true,
   "stylelint.config": {
     "rules": {
