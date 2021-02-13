@@ -6,18 +6,6 @@
   "[typescript]": {
     "editor.formatOnSave": false,
   },
-  "eslint.autoFixOnSave": true,
-  "eslint.validate": [
-    "javascript",
-    {
-      "language": "typescript",
-      "autoFix": true
-    },
-    {
-      "language": "typescriptreact",
-      "autoFix": true
-    }
-  ],
   "cSpell.words": [
     "Interop",
     "Openqa",
@@ -67,5 +55,8 @@
         "s",
       ]
     }
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }

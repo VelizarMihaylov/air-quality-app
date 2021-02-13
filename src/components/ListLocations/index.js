@@ -5,8 +5,8 @@ import compose from 'lodash/fp/compose'
 
 import LocationCard from 'components/LocationCard'
 
-import { useQuery } from '@apollo/react-hooks'
-import gql from 'graphql-tag'
+// import { useQuery } from '@apollo/react-hooks'
+// import gql from 'graphql-tag'
 
 import './index.scss'
 
