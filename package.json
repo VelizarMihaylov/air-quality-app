@@ -8,7 +8,7 @@
     "@apollo/react-hooks": "^4.0.0",
     "dayjs": "^1.10.4",
     "graphql": "^15.5.0",
-    "lodash": "^4.17.20",
+    "lodash": "^4.17.21",
     "node-sass": "^5.0.0",
     "normalize.css": "^8.0.1",
     "react": "^17.0.1",
